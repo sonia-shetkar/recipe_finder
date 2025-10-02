@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>🍳 Recipe Finder</h2>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="recipes"><i class="fas fa-utensils"></i> Recipes</a></li>
+          <li><a href="#" data-section="favourites"><i class="fas fa-heart"></i> Favourites</a></li>
+          <li><a href="#" data-section="about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search & Filters -->
+      <div class="search-section">
+        <h3>Search Recipes</h3>
+        <input type="text" id="ingredients-input" placeholder="e.g. chicken, tomato">
+        <select id="cuisine">
+          <option value="">Cuisine</option>
+          <option value="indian">Indian</option>
+          <option value="italian">Italian</option>
+          <option value="mexican">Mexican</option>
+          <option value="chinese">Chinese</option>
+        </select>
+        <select id="mealType">
+          <option value="">Meal Type</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="dessert">Dessert</option>
+        </select>
+        <button id="search-btn">Find Recipes</button>
+        <button id="random-btn">🎲 Surprise Me</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header>
+        <h1>Welcome to Interactive Recipe Finder</h1>
+        <p>Discover delicious recipes tailored to your ingredients and preferences!</p>
+      </header>
+
+      <section id="recipes" class="content-section active">
+        <h2>🔍 Your Recipes</h2>
+        <div id="recipes-list" class="recipes-grid"></div>
+      </section>
+
+      <section id="favourites" class="content-section">
+        <h2>❤️ Your Favourites</h2>
+        <div id="favourites-list">
+          <p>No favourites yet. Save recipes to see them here!</p>
+        </div>
+      </section>
+
+      <section id="about" class="content-section">
+        <h2>ℹ️ About</h2>
+        <p>
+          The Interactive Recipe Finder helps you discover amazing recipes based on
+          ingredients you have, preferred cuisine, and meal type.  
+          Built using Spoonacular API and designed for food lovers. 🍲
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Interactive Recipe Finder | Made with ❤️ for food lovers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
